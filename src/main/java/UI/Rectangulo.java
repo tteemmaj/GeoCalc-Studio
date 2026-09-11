@@ -172,11 +172,9 @@ public class Rectangulo extends javax.swing.JPanel {
                 return;
             }
 
-            // 2. Convertir texto a número
             double base = Double.parseDouble(textoBase);
             double altura = Double.parseDouble(textoAltura);
 
-            // Validar valores positivos
             if (base <= 0 || altura <= 0) {
                 JOptionPane.showMessageDialog(this, 
                     "La base y la altura deben ser mayores que 0.", 
@@ -185,10 +183,8 @@ public class Rectangulo extends javax.swing.JPanel {
                 return;
             }
 
-            // 3. Crear el objeto del modelo
             Poligono miRectangulo = new modelo.Rectangulo(base, altura, 4);
 
-            // 4. Mostrar los resultados directamente en las cajas de texto de la UI
             resultadoArea.setText(String.valueOf(miRectangulo.area()));
             resultadoPerimetro.setText(String.valueOf(miRectangulo.perimetro()));
 

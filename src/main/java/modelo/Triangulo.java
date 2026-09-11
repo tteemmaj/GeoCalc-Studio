@@ -44,7 +44,7 @@ public class Triangulo {
     }
 
     public double calcularArea() {
-        double s = calcularPerimetro() / 2; // Semiperímetro
+        double s = calcularPerimetro() / 2; 
         return Math.sqrt(s * (s - lado1) * (s - lado2) * (s - lado3));
     }
 }

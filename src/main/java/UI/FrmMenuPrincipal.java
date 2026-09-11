@@ -172,16 +172,12 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
         UI.Trapecio pnl = new UI.Trapecio();
 
-    // 2. Asignar BorderLayout a jPanel3 para que ocupe todo el espacio
     jPanel3.setLayout(new java.awt.BorderLayout());
 
-    // 3. Limpiar el contenido previo de jPanel3
     jPanel3.removeAll(); 
 
-    // 4. Agregar el panel de Trapecio al centro
     jPanel3.add(pnl, java.awt.BorderLayout.CENTER);
 
-    // 5. Refrescar la interfaz
     jPanel3.revalidate();
     jPanel3.repaint();
         
@@ -191,13 +187,10 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
     UI.Rectangulo pnl = new UI.Rectangulo();
 
-    // 2. Asignar BorderLayout a jPanel3 para que el panel hijo ocupe todo el espacio disponible
     jPanel3.setLayout(new java.awt.BorderLayout());
 
-    // 3. Limpiar únicamente el panel gris de la derecha (jPanel3)
     jPanel3.removeAll(); 
 
-    // 4. Agregar el nuevo panel al centro
     jPanel3.add(pnl, java.awt.BorderLayout.CENTER);
 
     // 5. Refrescar la interfaz
@@ -209,16 +202,12 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
         UI.Cuadrado pnl = new UI.Cuadrado();
 
-    // 2. Asegurar el layout de borde en jPanel3 para ajustar el tamaño automáticamente
     jPanel3.setLayout(new java.awt.BorderLayout());
 
-    // 3. Limpiar únicamente el panel derecho (jPanel3)
     jPanel3.removeAll(); 
 
-    // 4. Agregar la vista del Cuadrado al centro
     jPanel3.add(pnl, java.awt.BorderLayout.CENTER);
 
-    // 5. Refrescar el contenedor
     jPanel3.revalidate();
     jPanel3.repaint();
     }//GEN-LAST:event_btnCuadradoActionPerformed
@@ -227,16 +216,12 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
         UI.Triangulo pnl = new UI.Triangulo();
 
-    // 2. Ajustar el layout de borde en jPanel3 para auto-escalar la vista
     jPanel3.setLayout(new java.awt.BorderLayout());
 
-    // 3. Limpiar el contenedor derecho
     jPanel3.removeAll(); 
 
-    // 4. Agregar la vista en el centro
     jPanel3.add(pnl, java.awt.BorderLayout.CENTER);
 
-    // 5. Redibujar el contenedor
     jPanel3.revalidate();
     jPanel3.repaint();
         

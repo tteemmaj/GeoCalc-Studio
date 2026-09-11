@@ -212,14 +212,12 @@ public class Trapecio extends javax.swing.JPanel {
     private void btnCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularActionPerformed
         // TODO add your handling code here:
         try {
-        // 1. Obtener y convertir las entradas de texto
         double bMayor = Double.parseDouble(baseMayor.getText().trim());
         double bMenor = Double.parseDouble(baseMenor.getText().trim());
         double h = Double.parseDouble(altura.getText().trim());
         double lMayor = Double.parseDouble(ladoMayor.getText().trim());
         double lMenor = Double.parseDouble(ladoMenor.getText().trim());
 
-        // 2. Validar que los datos ingresados sean mayores a cero
         if (bMayor <= 0 || bMenor <= 0 || h <= 0 || lMayor <= 0 || lMenor <= 0) {
             javax.swing.JOptionPane.showMessageDialog(this, 
                 "Todos los datos (bases, altura y lados) deben ser mayores a cero.", 
@@ -228,7 +226,6 @@ public class Trapecio extends javax.swing.JPanel {
             return;
         }
 
-        // 3. Validar consistencia geométrica básica (La Base Mayor debe ser superior a la Base Menor)
         if (bMayor <= bMenor) {
             javax.swing.JOptionPane.showMessageDialog(this, 
                 "La 'Base Mayor' debe ser cuantitativamente mayor que la 'Base Menor'.", 
@@ -237,10 +234,8 @@ public class Trapecio extends javax.swing.JPanel {
             return;
         }
 
-        // 4. Instanciar la clase del paquete modelo
         modelo.Trapecio trapecio = new modelo.Trapecio(bMayor, bMenor, h, lMayor, lMenor);
 
-        // 5. Mostrar los resultados en los componentes Swing formateados a 2 decimales
         resultadoArea.setText(String.format("%.2f", trapecio.calcularArea()));
         resultadoPerimetro.setText(String.format("%.2f", trapecio.calcularPerimetro()));
 

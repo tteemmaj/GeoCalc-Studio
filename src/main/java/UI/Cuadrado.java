@@ -143,10 +143,8 @@ public class Cuadrado extends javax.swing.JPanel {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         try {
-            // 1. Obtener el texto del campo ladoCuadrado
             String textoLado = ladoCuadrado.getText().trim();
 
-            // Validar si el campo está vacío
             if (textoLado.isEmpty()) {
                 javax.swing.JOptionPane.showMessageDialog(this, 
                     "Por favor, ingrese el valor del lado.", 
@@ -155,10 +153,8 @@ public class Cuadrado extends javax.swing.JPanel {
                 return;
             }
 
-            // 2. Convertir texto a double
             double lado = Double.parseDouble(textoLado);
 
-            // Validar que el lado sea mayor a 0
             if (lado <= 0) {
                 javax.swing.JOptionPane.showMessageDialog(this, 
                     "El lado debe ser mayor que 0.", 
@@ -167,10 +163,8 @@ public class Cuadrado extends javax.swing.JPanel {
                 return;
             }
 
-            // 3. Instanciar el modelo (pasando el lado para ambos parámetros de la clase Cuadrado)
             modelo.Cuadrado miCuadrado = new modelo.Cuadrado(lado, lado);
 
-            // 4. Mostrar los resultados en los campos correspondientes de la interfaz
             areaCuadrado.setText(String.valueOf(miCuadrado.calcularArea()));
             perimetroCuadrado.setText(String.valueOf(miCuadrado.calcularPerimetro()));
 

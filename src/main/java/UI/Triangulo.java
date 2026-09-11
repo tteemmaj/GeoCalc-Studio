@@ -300,12 +300,10 @@ public class Triangulo extends javax.swing.JPanel {
     private void btnCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularActionPerformed
         // TODO add your handling code here:
         try {
-        // 1. Obtener y parsear los textos ingresados en los campos de entrada
         double a = Double.parseDouble(ladoA.getText().trim());
         double b = Double.parseDouble(ladoB.getText().trim());
         double c = Double.parseDouble(ladoC.getText().trim());
 
-        // 2. Validar que los lados sean positivos
         if (a <= 0 || b <= 0 || c <= 0) {
             javax.swing.JOptionPane.showMessageDialog(this, 
                 "Los lados deben ser valores numéricos mayores a cero.", 
@@ -314,7 +312,6 @@ public class Triangulo extends javax.swing.JPanel {
             return;
         }
 
-        // 3. Validar la Desigualdad Triangular (condición para que exista un triángulo)
         if ((a + b <= c) || (a + c <= b) || (b + c <= a)) {
             javax.swing.JOptionPane.showMessageDialog(this, 
                 "Los lados ingresados no forman un triángulo válido.\n(La suma de dos lados siempre debe ser mayor al tercero).", 
@@ -323,10 +320,8 @@ public class Triangulo extends javax.swing.JPanel {
             return;
         }
 
-        // 4. Instanciar la clase modelo.Triangulo
         modelo.Triangulo triangulo = new modelo.Triangulo(a, b, c);
 
-        // 5. Calcular y mostrar los resultados formateados a 2 decimales
         resultadoArea.setText(String.format("%.2f", triangulo.calcularArea()));
         resultadoPerimetro.setText(String.format("%.2f", triangulo.calcularPerimetro()));
 
